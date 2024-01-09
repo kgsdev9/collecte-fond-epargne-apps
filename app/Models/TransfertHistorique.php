@@ -19,5 +19,13 @@ class TransfertHistorique extends Model
         'recevier_id'
     ];
 
+    public function owner() {
+        return $this->belongsTo(Client::class, 'sender_id');
+    }
+
+    public function recevied() {
+        return $this->belongsTo(Client::class, 'recevier_id');
+    }
+
 }
 
