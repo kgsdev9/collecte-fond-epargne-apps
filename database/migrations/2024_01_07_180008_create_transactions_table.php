@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('reference');
             $table->integer('montant');
-            $table->integer('type_transaction');
+            $table->string('type_transaction');
             $table->unsignedBigInteger('compte_id')->nullable();
             $table->foreign('compte_id')->references('id')->on('comptes')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->timestamps();

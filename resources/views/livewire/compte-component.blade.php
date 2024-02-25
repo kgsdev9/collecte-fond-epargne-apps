@@ -73,7 +73,7 @@
             @endforeach
         </div>
     </section>
-    <div   class="modal fade" id="exampleModal" data-bs-backdrop="static">
+    <div wire:ignore.self   class="modal fade" id="exampleModal" data-bs-backdrop="static">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header border-0 pb-0">
@@ -103,10 +103,10 @@
                                 <div class="tab-pane fade active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                     <div class="input-block mb-3">
                                         <label>Entrer le montant de crédition  <span class="text-danger"> *</span></label>
-                                        <input type="number" wire:model="ajouter" class="form-control" placeholder="123333">
+                                        <input type="number" wire:model="montant" class="form-control" placeholder="123333">
                                     </div>
                                     <div class="input-block mb-3">
-                                         <button type="button" class="btn btn-dark" wire:click="addAcompte()">Enregistrer </button>
+                                         <button type="button" class="btn btn-dark" wire:click="addAcompte()">Ajouter  <span>{{$montant}}</span></button>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -123,7 +123,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" data-bs-dismiss="modal" class="btn btn-back cancel-btn me-2">Cancel</button>
-                        <button type="submit" data-bs-dismiss="modal" class="btn btn-primary paid-continue-btn">pay Now</button>
+                      
                     </div>
 
             </div>
